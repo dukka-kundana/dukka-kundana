@@ -3,9 +3,9 @@ CREATE TABLE directors (
   director_name VARCHAR(255)
 );
 INSERT INTO directors (director_id, director_name) VALUES
-  (1, 'Director 1'),
-  (2, 'Director 2'),
-  (3, 'Director 3');
+  (1, 'James Cameron'),
+  (2, 'Tony Scott'),
+  (3, 'Ridley Scott');
   CREATE TABLE movies (
   movie_id INT PRIMARY KEY,
   title VARCHAR(255),
@@ -14,19 +14,19 @@ INSERT INTO directors (director_id, director_name) VALUES
   FOREIGN KEY (director_id) REFERENCES directors(director_id)
 );
 INSERT INTO movies (movie_id, title, release_year, director_id) VALUES
-  (1, 'Movie 1', 2000, 1),
-  (2, 'Movie 2', 2005, 2),
-  (3, 'Movie 3', 2010, 3),
-  (4, 'Movie 4', 2015, 1),
-  (5, 'Movie 5', 2020, 2);
+  (1, 'Titanic', 2015, 1),
+  (2, 'Top Gun', 2017, 2),
+  (3, 'Robin Hood', 2011, 3),
+  (4, 'The Last Duel', 2013, 1),
+  (5, 'The Martian', 2017, 2);
 CREATE TABLE genres (
   genre_id INT PRIMARY KEY,
   genre_name VARCHAR(255)
 );
 INSERT INTO genres (genre_id, genre_name) VALUES
-  (1, 'Genre 1'),
-  (2, 'Genre 2'),
-  (3, 'Genre 3');
+  (1, 'Action'),
+  (2, 'Thriller'),
+  (3, 'Action');
   CREATE TABLE movie_genres (
   movie_id INT,
   genre_id INT,
